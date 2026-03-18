@@ -20,50 +20,52 @@ Merchant_Ship_Items = [
     },
     {
         "name": "Iron Spear",
-        "price": 10,
+        "price": 12,
         "Weapon Type": "Medium",
         "description": "A spear perfect for poking at a safe distance."
     },
     {
         "name": "Mace",
-        "price": 10,
+        "price": 15,
         "Weapon Type": "Medium",
         "description": "A simple blunt weapon effective at breaking guards."
     },
     {  
-        "name": "Samsung 55\" 4K UHD TV",
-        "price": 429.99,
-        "Weapon Type": "Televisions",
-        "description": "55-inch Ultra HD Smart TV with HDR and built-in streaming apps."
+        "name": "Flintlock",
+        "price": 50,
+        "Weapon Type": "Light",
+        "description": "The son of a village blacksmith, a young Gunsmith Rosen took to the seas and returned an older man, bringing with him the spark of inspiration that brought firearms into the world. The modern flintlock is an improved and lightweight version of Gunsmith's prototype now found in every Luminant."
     },
     {
-        "name": "Samsung 55\" 4K UHD TV",
-        "price": 429.99,
-        "Weapon Type": "Televisions",
-        "description": "55-inch Ultra HD Smart TV with HDR and built-in streaming apps."
+        "name": "Apprentice Rapier",
+        "price": 12,
+        "Weapon Type": "Light",
+        "description": "Although fragile in appearance, this beginner's blade has been the starting point for many Pathfinders beginning their journey."
     },
     {
-        "name": "Samsung 55\" 4K UHD TV",
-        "price": 429.99,
-        "Weapon Type": "Televisions",
-        "description": "55-inch Ultra HD Smart TV with HDR and built-in streaming apps."
+        "name": "Zweihander",
+        "price": 20,
+        "Weapon Type": "Heavy",
+        "description": "Popularised by the Canor Borderwatchers, the Zweihander is as fearsome as it is heavy."
     },
     {
-        "name": "Samsung 55\" 4K UHD TV",
-        "price": 429.99,
-        "Weapon Type": "Televisions",
-        "description": "55-inch Ultra HD Smart TV with HDR and built-in streaming apps."
+        "name": "Iron Cestus",
+        "price": 15,
+        "Weapon Type": "Light",
+        "description": "Your own two fists. Worth a shot, right?"
     },
     {
-        "name": "Samsung 55\" 4K UHD TV",
-        "price": 429.99,
-        "Weapon Type": "Televisions",
-        "description": "55-inch Ultra HD Smart TV with HDR and built-in streaming apps."
-    },
-    {
-        "name": "Samsung 55\" 4K UHD TV",
-        "price": 429.99,
-        "Weapon Type": "Televisions",
-        "description": "55-inch Ultra HD Smart TV with HDR and built-in streaming apps."
-    }, 
+        "name": "Steel Maul",
+        "price": 20,
+        "Weapon Type": "Heavy",
+        "description": "A sturdy maul perfect for knocking walls and people down alike."
+    }
 ]
+
+for index, item in enumerate(Merchant_Ship_Items):
+    print(index, ":", item["name"])
+
+
+choice = int(input ("What would you like to buy, Pathfinder?"))
+
+print (Merchant_Ship_Items[choice]["name"])
