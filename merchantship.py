@@ -62,10 +62,32 @@ Merchant_Ship_Items = [
     }
 ]
 
+cart = []
+shopping = True
+number = 0
+prices = 0
 for index, item in enumerate(Merchant_Ship_Items):
     print(index, ":", item["name"])
 
+while shopping == True:
+    choice = int(input ("What would you like to buy, Pathfinder?"))
+    cart.append((Merchant_Ship_Items[choice]))
+    print ("Would you like to continue shopping?")
+    print ("1: Yes")
+    print ("2: No")
+    number = int((input("Answer:")))
+    if number == 1:
+        shopping = True
+    elif number == 2:
+        break
 
-choice = int(input ("What would you like to buy, Pathfinder?"))
+for i in cart:
+    prices = prices+i["price"]
 
-print (Merchant_Ship_Items[choice]["name"])
+print (cart ["name"])
+print ("Amount due:", prices)
+
+
+
+
+# print (Merchant_Ship_Items[choice]["name"])
