@@ -65,13 +65,17 @@ Merchant_Ship_Items = [
 cart = []
 shopping = True
 number = 0
-prices = 0
+prices = []
+pricex = 0
+# whalen = []
 for index, item in enumerate(Merchant_Ship_Items):
     print(index, ":", item["name"])
 
 while shopping == True:
     choice = int(input ("What would you like to buy, Pathfinder?"))
-    cart.append((Merchant_Ship_Items[choice]))
+    # whalen.append((Merchant_Ship_Items[choice]))
+    cart.append((Merchant_Ship_Items[choice]["name"]))
+    prices.append((Merchant_Ship_Items[choice]["price"]))
     print ("Would you like to continue shopping?")
     print ("1: Yes")
     print ("2: No")
@@ -80,12 +84,13 @@ while shopping == True:
         shopping = True
     elif number == 2:
         break
+# print(whalen)
+pricex = sum(prices)
+
 
 for i in cart:
-    prices = prices+i["price"]
-
-print (cart ["name"])
-print ("Amount due:", prices)
+    print(i)
+print ("Amount due:", pricex)
 
 
 
